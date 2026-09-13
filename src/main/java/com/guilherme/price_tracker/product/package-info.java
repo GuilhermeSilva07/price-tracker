@@ -1,5 +1,5 @@
 /**
  * Handles product registration and tracking for the price monitoring service.
  */
-package com.guilherme.pricetracker.product;
+package com.guilherme.price_tracker.product;
 
