@@ -5,9 +5,14 @@
 - Java 21
 - Spring Boot 4.1.1 (Web MVC, Data JPA, Validation)
 - PostgreSQL 16
-- Flyway (schema migrations)
+- Flyway (schema migrations, via `spring-boot-starter-flyway` — Spring Boot 4
+  moved Flyway autoconfiguration out of `spring-boot-autoconfigure` into its
+  own starter; `flyway-core` alone does not trigger migrations)
 - Gradle (Kotlin DSL)
-- Docker / Docker Compose (local Postgres)
+- Docker / Docker Compose (local Postgres) + multi-stage `Dockerfile`
+- GitHub Actions CI (`.github/workflows/ci.yml`): build + test against a
+  Postgres service container, then a Docker image build, on every push/PR to
+  `develop`/`master`
 - RabbitMQ (planned, Phase 2)
 
 ## Package structure (package-by-feature)

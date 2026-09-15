@@ -28,15 +28,19 @@ Within a phase, prefer this order:
 Example for Phase 1: entity modeling → product registration endpoint →
 Mercado Livre integration → email alert.
 
-## Current status (last synced 2026-09-13)
+## Current status (last synced 2026-09-15)
 
 - Phase 1 — MVP:
   - [x] Project setup (Spring Boot + Gradle + PostgreSQL)
-  - [~] Entity modeling (User done; Product and PriceHistory just completed,
-        pending review) — branch `feature/entity-modeling`
+  - [x] Entity modeling (User, Product, PriceHistory) — merged via PR #1
   - [ ] `POST /api/products` endpoint
   - [ ] Mercado Livre integration
   - [ ] Email alert on price drop
+- Phase 5:
+  - [x] CI/CD: GitHub Actions pipeline + Dockerfile — merged via PR #2
+
+Every merge to `develop` so far went through a `feature/*` branch and PR,
+verified green by CI before merging.
 
 Source of truth: this file. Update it first, then keep the Trello
 "Development Workflow and Card Order" card summary in sync.
